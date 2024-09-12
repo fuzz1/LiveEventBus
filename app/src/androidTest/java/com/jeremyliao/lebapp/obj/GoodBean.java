@@ -1,7 +1,7 @@
 package com.jeremyliao.lebapp.obj;
 
 import com.jeremyliao.liveeventbus.ipc.annotation.IpcConfig;
-import com.jeremyliao.liveeventbus.ipc.core.GsonProcessor;
+import com.jeremyliao.liveeventbus.processor.gson.GsonProcessor;
 
 /**
  * Created by liaohailiang on 2019/3/26.

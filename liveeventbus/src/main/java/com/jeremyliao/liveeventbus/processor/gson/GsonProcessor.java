@@ -30,10 +30,19 @@ public class GsonProcessor implements Processor {
         try {
             classType = Class.forName(className);
         } catch (ClassNotFoundException e) {
-            int last = className.lastIndexOf('.');
+            int last = 0;
+            if (className != null) {
+                last = className.lastIndexOf('.');
+            }
             if (last != -1) {
-                String pn = className.substring(0, last);
-                String cn = className.substring(last + 1);
+                String pn = null;
+                if (className != null) {
+                    pn = className.substring(0, last);
+                }
+                String cn = null;
+                if (className != null) {
+                    cn = className.substring(last + 1);
+                }
                 classType = Class.forName(pn + "$" + cn);
             }
         }
